@@ -135,3 +135,30 @@ td, th {
   border-bottom: 1px solid #e2e8f0;
   text-align: left;
 }
+.search-filter {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-filter input,
+.search-filter select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.search-filter button {
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-filter button:hover {
+  background-color: #1d4ed8;
+}
