@@ -52,6 +52,21 @@
         <input type="file" id="excelFile" accept=".xlsx">
         <button id="upload-btn">Upload & Preview</button>
       </section>
+      
+<section class="search-filter">
+  <h3>Search & Filters</h3>
+  <input type="text" id="searchInput" placeholder="Search by company or role..." />
+  
+  <select id="statusFilter">
+    <option value="">All Statuses</option>
+    <option value="Pending">Pending</option>
+    <option value="Followed Up">Followed Up</option>
+    <option value="Interview">Interview Scheduled</option>
+    <option value="Rejected">Rejected</option>
+  </select>
+
+  <button id="search-btn">Search</button>
+</section>
 
       <section id="preview-section" style="display:none;">
         <h3>File Preview</h3>
