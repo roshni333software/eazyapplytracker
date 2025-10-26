@@ -9,6 +9,66 @@
   <meta name="robots" content="index,follow">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #f9fafb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background-color: white;
+      width: 380px;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      width: 70px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      color: #2563eb;
+      font-size: 1.6rem;
+      margin: 10px 0;
+    }
+    .tagline {
+      color: #333;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    .subline {
+      color: #6b7280;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #2563eb;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
 </head>
 <body>
   <div class="card">
@@ -23,6 +83,20 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
+  <script>
+    const emailInput = document.getElementById("email");
+    const loginBtn = document.getElementById("login-btn");
+
+    emailInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") handleLogin();
+    });
+    loginBtn.addEventListener("click", handleLogin);
+
+    function handleLogin() {
+      const email = emailInput.value.trim().toLowerCase();
+      if (!email) return alert("Please enter your email.");
+      window.location.href = "dashboard.html";
+    }
+  </script>
 </body>
 </html>
